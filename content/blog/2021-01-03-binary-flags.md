@@ -1,10 +1,10 @@
-+++
-title = "Quick Review of the Most Popular Ways to Implement Flags"
-description = "Quick introduction to different type of flags with pros and cons"
-author = "Anton Ohorodnyk"
-date = "2021-01-03"
-tags = []
-+++
+---
+title: "Quick Review of the Most Popular Ways to Implement Flags"
+description: "Quick introduction to different type of flags with pros and cons"
+author: "Anton Ohorodnyk"
+date: "2021-01-03"
+tags: []
+---
 
 # Introduction
 There are many ways to store flags and use them for communication between `client <-> backend service` or `service <-> service`. In the article, we are going to review the most popular options and we will try to help to choose the correct way for the next project.
