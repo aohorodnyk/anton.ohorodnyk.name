@@ -1,0 +1,13 @@
+baseURL: "https://anton.ohorodnyk.name/"
+languageCode: "en-us"
+title: "Anton Ohorodnyk"
+enableGitInfo: true
+
+enableRobotsTXT: true
+
+module:
+  imports:
+    - path: github.com/necolas/normalize.css
+      mounts:
+        - source: normalize.css
+          target: assets/css/normalize.css

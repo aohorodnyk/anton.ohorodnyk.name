@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="{{ .Page.Language | default "en" }}">
+  {{ partial "head.html" . }}
+  <body>
+    <main id="site-main">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+github.com/necolas/normalize.css v1.1.3 h1:zXQGKU4qOrIkAw0lyqHVdWtbHMd0PVjhraD5xbIlISE=
+github.com/necolas/normalize.css v2.1.3+incompatible h1:tZYmptM/WDBKUqgh0rD8HSafGiK417jdyT+XJ6c+zjU=
+github.com/necolas/normalize.css v2.1.3+incompatible/go.mod h1:892T+m70k5cQA34rKLasOW7c3/cEHdn86mfwm8Xlxic=
+github.com/necolas/normalize.css v2.1.4-0.20181105022943-fc091cce1534+incompatible h1:EUpI9GbY4DIdb8A3mNGgFcMb520ifvtHJ5mfnZSZ9p0=
+github.com/necolas/normalize.css v2.1.4-0.20181105022943-fc091cce1534+incompatible/go.mod h1:892T+m70k5cQA34rKLasOW7c3/cEHdn86mfwm8Xlxic=

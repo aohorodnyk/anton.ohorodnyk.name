@@ -1,0 +1,9 @@
+{{ $style := resources.Get "scss/main.scss" }}
+{{ $style = $style | resources.ToCSS }}
+
+{{/* Minify, concatinate, etc. styles */}}
+{{ if eq hugo.Environment "production" }}
+  {{ $style = $style | resources.Minify }}
+{{ end }}
+
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
