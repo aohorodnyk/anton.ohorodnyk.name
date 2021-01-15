@@ -1,11 +1,11 @@
 {{ $normalize := resources.Get "css/normalize.css" }}
 
-{{/* Minify, concatinate, etc. styles */}}
-{{ $style := slice $normalize | resources.Concat "css/libs.css" }}
+{{/* Minify, concatinate, etc. */}}
+{{ $buildName := print .GitInfo.AbbreviatedHash "/css/libs.css" }}
+{{ $style := slice $normalize | resources.Concat $buildName }}
 {{ if eq hugo.Environment "production" }}
   {{ $style = $style | resources.Minify }}
 {{ end }}
 
-<link rel="stylesheet" href="{{ $style.RelPermalink }}?{{ .Site.GitInfo.Hash }}">
-{{ if .IsPage }}<small class="gray"><em>Updated: {{ .Page.Lastmod }}, Version: {{ .GitInfo.AbbreviatedHash }}</em></
-  small>{{ end }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+

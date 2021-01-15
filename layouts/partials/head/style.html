@@ -1,6 +1,9 @@
-{{ $style := resources.Get "scss/main.scss" }}
-{{ $style = $style | resources.ToCSS }}
+{{ $main := resources.Get "scss/main.scss" }}
+{{ $main = $main | resources.ToCSS }}
 
+{{/* Minify, concatinate, etc. */}}
+{{ $buildName := print .GitInfo.AbbreviatedHash "/css/main.css" }}
+{{ $style := slice $main | resources.Concat $buildName }}
 {{/* Minify, concatinate, etc. styles */}}
 {{ if eq hugo.Environment "production" }}
   {{ $style = $style | resources.Minify }}
