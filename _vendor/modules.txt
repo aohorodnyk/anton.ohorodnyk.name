@@ -1,1 +1,2 @@
 # github.com/necolas/normalize.css v2.1.4-0.20181105022943-fc091cce1534+incompatible
+# github.com/FortAwesome/Font-Awesome v0.0.0-20210113202311-fcec2d1b01ff
