@@ -1,0 +1,19 @@
+<ul class="posts">
+  {{ range .paginator.Pages }}
+  <li>
+    <article class="post">
+      <h2 class="subject"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <p class="description">
+        {{ .Description }}
+      </p>
+      <div class="metadata">
+        <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+
+        {{ with .Params.topics }}
+        {{ partial "article/topics.html" . }}
+        {{ end }}
+      </div>
+    </article>
+  </li>
+  {{ end }}
+</ul>

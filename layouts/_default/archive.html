@@ -1,0 +1,18 @@
+{{- define "main" -}}
+<ul>
+  {{ $pages := where site.RegularPages "Type" "posts" }}
+  {{ range $pages.GroupByDate "2006" }}
+    <li>
+      <h3>{{ .Key }}</h3>
+      <ul>
+          {{ range .Pages }}
+          <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <div class="meta">{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
+          </li>
+          {{ end }}
+      </ul>
+    </li>
+  {{ end }}
+</ul>
+{{- end -}}

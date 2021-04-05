@@ -1,0 +1,12 @@
+{{- define "main" -}}
+  {{ .Title }}
+  {{ $data := .Data }}
+  {{ range $key,$value := .Data.Terms.ByCount }}
+  <ul>
+    <li>
+      <a href="/{{ $data.Plural }}/{{ lower $value.Name | urlize }}" title="All pages with tag <i>{{ humanize $value.Name }}</i>">{{ humanize $value.Name }}</a>
+      <sup>{{ $value.Count }}</sup>
+    </li>
+  </ul>
+  {{ end }}
+{{- end -}}

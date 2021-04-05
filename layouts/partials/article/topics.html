@@ -1,0 +1,8 @@
+<div class="topics">
+  <i class="fas fa-tags"></i>
+  <ul>
+    {{ range . }}
+      <li><a class="" href="/topics/{{ lower . | urlize }}">{{ humanize . }}</a></li>
+    {{ end }}
+  </ul>
+</div>

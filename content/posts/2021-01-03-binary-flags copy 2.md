@@ -3,7 +3,7 @@ title: "Quick Review of the Most Popular Ways to Implement Flags"
 description: "Quick introduction to different type of flags with pros and cons"
 author: "Anton Ohorodnyk"
 date: "2021-01-03"
-tags: []
+topics: ["golang", "library"]
 ---
 
 # Introduction
@@ -87,7 +87,6 @@ It can be optimized to not store the flag as a string, but in our current topic,
 ### JSON Example
 In a code or a NoSQL database representation would be:
 ```json
-
 [
 	{
 		"id": 1,

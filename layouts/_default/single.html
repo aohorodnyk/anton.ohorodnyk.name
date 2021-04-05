@@ -1,0 +1,27 @@
+{{- define "main" -}}
+<div class="single-post">
+  <article>
+    <header>
+      <h1>{{ .Title }}</h1>
+      <aside class="aside-footnotes">
+        <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+
+        {{ with .Params.topics }}
+        {{ partial "article/topics.html" . }}
+        {{ end }}
+      </aside>
+    </header>
+    {{.TableOfContents}}
+    {{ .Content }}
+  </article>
+  <footer>
+    {{ with .PrevInSection }}
+    <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+    {{ end }}
+    {{ with .NextInSection }}
+    <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+    {{ end }}
+  </footer>
+</div>
+
+{{ end }}

@@ -1,0 +1,18 @@
+<header class="site-header">
+    <aside>
+        <a href="/" class="logo"><img class="logo" src="/favicon/safari-pinned-tab.svg?v=1" /></a>
+        <ul class="menu">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            <li>
+                <a href="{{ .URL }}" {{ if (eq (trim $currentPage.RelPermalink "/" ) (trim .URL "/" )) }}class="active"
+                    {{ end }}>
+                    {{- with .Pre -}}<span class="pre">{{ . }}</span>{{- end -}}
+                    <span class="name">{{ .Name }}</span>
+                    {{- with .Post -}}<span class="post">{{ . }}</span>{{- end -}}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </aside>
+</header>

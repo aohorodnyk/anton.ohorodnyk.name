@@ -1,4 +1,4 @@
 ---
-title: "Quick Review of the Most Popular Ways to Implement Flags"
+title: "Blog"
 date: "2020-07-12"
 ---
